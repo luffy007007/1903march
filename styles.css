@@ -1,0 +1,262 @@
+:root {
+    color-scheme: light only;
+  }
+  
+@font-face {
+    font-family: 'FriendsFont';
+    src: url('assets/GABRWFFR.TTF') format('truetype');
+}
+
+/* General Styles */
+body {
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-family: 'FriendsFont', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hide elements initially */
+.hidden {
+    display: none;
+}
+
+/* Friends-style title */
+.friends-title {
+    font-size: 2.8em;
+    font-weight: bold;
+    max-width: 350px;
+    color: black;
+    letter-spacing: 10px;
+    display: inline-block;
+    position: relative;
+    margin-top: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect (Joey's style tilt) */
+.friends-title:hover {
+    transform: rotate(-5deg) scale(1.1);
+}
+
+/* Friends-style dots between letters */
+/* Friends-style dots between letters */
+.friends-title span {
+    position: relative;
+    display: inline-block;
+
+    padding-right: 10px; /* Adds spacing so dots don’t overlap */
+}
+
+.friends-title span::after {
+    content: "●";
+    font-size: 0.8em;
+    position: absolute;
+    right: -8px;
+    margin-top: -5px; /* Moves dots slightly lower */
+    transform: translateY(50%); /* Ensures dots align well */
+}
+
+/* Different colors for dots */
+.friends-title span:nth-child(odd)::after { color: #FF6347; } /* Red */
+.friends-title span:nth-child(even)::after { color: #FFD700; } /* Yellow */
+.friends-title span:nth-child(3n)::after { color: #4682B4; } /* Blue */
+
+
+/* Monica's Peephole Frame as Full Background */
+/* Monica's Peephole Frame as Faded Background */
+#main-page {
+    background: url('assets/peephole.hhpng') no-repeat center center;
+    background-size: contain;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Fading effect for peephole image */
+#main-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/peephole.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.8; /* Adjust fade level (0.1 - 1.0) */
+    z-index: -20;
+}
+
+
+
+/* Make all text black */
+.friends-title,
+.chandler-quote,
+.funny-message {
+    color: black;
+}
+
+
+/* Chandler's Quote */
+.chandler-quote {
+    font-size: 1.8em;
+    font-style: italic;
+    max-width: 300px;
+    color: #050000;
+    margin-top: 5px;
+    margin-bottom: 6px;
+}
+.chandler {
+    font-size: smaller;
+    margin-top: 1px;
+}
+/* Funny message */
+.funny-message {
+    font-size: 1.5em;
+    color: #0f0301;
+    font-style: italic;
+    background-color: rgba(255, 255, 255, 0.568);
+    margin-top: -10px;
+    max-width: 250px;
+    padding: 10px;
+    border-radius: 0px;
+    display: inline-block;
+}
+
+/* Button styling */
+button {
+    background-color: rgb(123, 78, 134);
+    color: white;
+    font-family: 'FriendsFont', sans-serif;
+    font-size: 22px;
+    padding: 14px 28px;
+    border-radius: 12px;
+    border: 3px solid #1b1a1a;
+    cursor: pointer;
+    margin-top: 1px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #FF6347;
+    color: white;
+    border-color: black;
+    transform: scale(1.1);
+}
+
+/* Friends Orange Couch Background */
+/* Full Couch Background with Emojis */
+#surprise-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/couch.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.8; /* Adjust fade level (0.1 - 1.0) */
+    z-index: -20;
+}
+#surprise-page .quote {
+    position: relative;
+    font-size: small;
+    margin-top: -30px;
+    z-index: 10;
+    padding: 20px;
+    border-radius: 10px;
+    color: black; /* Ensure Sharp Text */
+}
+#surprise-page .chandler-quote {
+    font-size: 1.5em;
+    font-style: italic;
+    max-width: 300px;
+    color: #050000;
+    margin-top: -10px;
+}
+
+/* Surprise Photo */
+#photo {
+    width: 150px;
+    border-radius: 15px;
+    margin-top: -20px;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 1s, transform 1s;
+    border: 5px solid black;
+}
+
+#photo.reveal {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#wrong-person {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/couch.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.8; /* Adjust fade level (0.1 - 1.0) */
+    z-index: -20;
+    
+}
+#photo2 {
+    width: 320px;
+    border-radius: 15px;
+    margin-left : -30px;
+    transform: scale(0.5);
+    transition: opacity 1s, transform 1s;
+    border: 5px solid black;
+}
+#right-person .scroll{
+    margin-top: -20px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1em;
+}
+/* Mobile View (For screens 600px and below) */
+@media (max-width: 600px) {
+
+    /* Adjust the Peephole Background for Mobile */
+    #main-page {
+        background-size: 100%; /* Cover the entire screen */
+    }
+  
+    /* Adjust Text Size for Mobile */
+    .friends-title {
+        font-size: 40px;
+    }
+
+    .chandler-quote,
+    .funny-message {
+        font-size: 20px;
+    }
+  
+    /* Adjust the Peephole Frame Content */
+    .peephole-frame {
+        width: 80%; /* Use most of the screen */
+    }
+  
+    /* Make Emojis Smaller and Fewer */
+    #second-page::before {
+        background-size: 50px; /* Smaller emojis */
+        opacity: 0.15; /* Lighter on mobile */
+    }
+
+    /* Ensure Text Visibility on Couch Background */
+    #surprise-page .content {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
