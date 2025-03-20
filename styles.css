@@ -7,7 +7,7 @@
     src: url('assets/GABRWFFR.TTF') format('truetype');
 }
 
-/* General Styles */
+
 body {
     background-color: white;
     color: black;
@@ -17,12 +17,11 @@ body {
     padding: 0;
 }
 
-/* Hide elements initially */
+
 .hidden {
     display: none;
 }
 
-/* Friends-style title */
 .friends-title {
     font-size: 2.8em;
     font-weight: bold;
@@ -35,18 +34,17 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Hover effect (Joey's style tilt) */
+
 .friends-title:hover {
     transform: rotate(-5deg) scale(1.1);
 }
 
-/* Friends-style dots between letters */
-/* Friends-style dots between letters */
+
 .friends-title span {
     position: relative;
     display: inline-block;
 
-    padding-right: 10px; /* Adds spacing so dots don’t overlap */
+    padding-right: 10px; 
 }
 
 .friends-title span::after {
@@ -54,18 +52,17 @@ body {
     font-size: 0.8em;
     position: absolute;
     right: -8px;
-    margin-top: -5px; /* Moves dots slightly lower */
-    transform: translateY(50%); /* Ensures dots align well */
+    margin-top: -5px; 
+    transform: translateY(50%); 
 }
 
-/* Different colors for dots */
 .friends-title span:nth-child(odd)::after { color: #FF6347; } /* Red */
 .friends-title span:nth-child(even)::after { color: #FFD700; } /* Yellow */
 .friends-title span:nth-child(3n)::after { color: #4682B4; } /* Blue */
 
 
-/* Monica's Peephole Frame as Full Background */
-/* Monica's Peephole Frame as Faded Background */
+
+
 #main-page {
     background: url('assets/peephole.hhpng') no-repeat center center;
     background-size: contain;
@@ -79,7 +76,7 @@ body {
     position: relative;
 }
 
-/* Fading effect for peephole image */
+
 #main-page::before {
     content: "";
     position: absolute;
@@ -89,13 +86,12 @@ body {
     height: 100%;
     background: url('assets/peephole.png') no-repeat center center;
     background-size: cover;
-    opacity: 0.8; /* Adjust fade level (0.1 - 1.0) */
+    opacity: 0.8; 
     z-index: -20;
 }
 
 
 
-/* Make all text black */
 .friends-title,
 .chandler-quote,
 .funny-message {
@@ -103,7 +99,7 @@ body {
 }
 
 
-/* Chandler's Quote */
+
 .chandler-quote {
     font-size: 1.8em;
     font-style: italic;
@@ -116,7 +112,7 @@ body {
     font-size: smaller;
     margin-top: 1px;
 }
-/* Funny message */
+
 .funny-message {
     font-size: 1.5em;
     color: #0f0301;
@@ -129,7 +125,7 @@ body {
     display: inline-block;
 }
 
-/* Button styling */
+
 button {
     background-color: rgb(123, 78, 134);
     color: white;
@@ -151,8 +147,6 @@ button:hover {
     transform: scale(1.1);
 }
 
-/* Friends Orange Couch Background */
-/* Full Couch Background with Emojis */
 #surprise-page::before {
     content: "";
     position: absolute;
@@ -162,7 +156,7 @@ button:hover {
     height: 100%;
     background: url('assets/couch.png') no-repeat center center;
     background-size: cover;
-    opacity: 0.8; /* Adjust fade level (0.1 - 1.0) */
+    opacity: 0.8; 
     z-index: -20;
 }
 #surprise-page .quote {
@@ -172,7 +166,7 @@ button:hover {
     z-index: 10;
     padding: 20px;
     border-radius: 10px;
-    color: black; /* Ensure Sharp Text */
+    color: black; 
 }
 #surprise-page .chandler-quote {
     font-size: 1.5em;
@@ -182,7 +176,7 @@ button:hover {
     margin-top: -10px;
 }
 
-/* Surprise Photo */
+
 #photo {
     width: 150px;
     border-radius: 15px;
@@ -207,7 +201,7 @@ button:hover {
     height: 100%;
     background: url('assets/couch.png') no-repeat center center;
     background-size: cover;
-    opacity: 0.8; /* Adjust fade level (0.1 - 1.0) */
+    opacity: 0.8; 
     z-index: -20;
     
 }
@@ -225,7 +219,6 @@ button:hover {
     right: 20px;
     font-size: 1em;
 }
-/* Mobile View (For screens 600px and below) */
 @media (max-width: 600px) {
 
     /* Adjust the Peephole Background for Mobile */
